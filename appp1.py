@@ -6,21 +6,23 @@ import pandas as pd
 from warnings import filterwarnings
 filterwarnings('ignore')
 
+# App Title
+
+st.title('CONCRETE STRENGTH PREDICTION')
+
+
+#[theme]
+base="dark"
+primaryColor="purple"
 
 # Nice Concrete Photo
 
 from PIL import Image
 im = Image.open("concrete_static.jpg")
-st.image(im, width = 450, caption = "by Rajesh Hugar")
+st.image(im, width = 400, caption = "concrete test")
 
-# App Title
 
-html_temp = """
-<div style="background-color:green;padding:1.5px">
-<hi style="color: white;text-align:center;">Compresssive Strength Prediction </hl>
-</div><br>"""
-
-st.markdown (html_temp, unsafe_allow_html=True)
+#st.markdown(html_temp, unsafe_allow_html=True)
 
 # Get the Input Values From Sidebar
 st.sidebar.title('Please Enter the Following Parameters')
@@ -62,3 +64,5 @@ if st.sidebar.button ("Submit"):
 
     result = (model.predict (dfc))
     st.success(f"Compressive Strength Prediction of the Concrete is {result} MPa")
+    
+st.markdown('By-Rajesh Hugar')
