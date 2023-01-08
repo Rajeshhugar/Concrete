@@ -2,4 +2,5 @@ This is a Machine Learning model to predict the strength of concrete based on it
 
 View app live  - https://share.streamlit.io/raj-shyamal/concrete-strength-predictor/app.py
 
-![](images/Screenshot.png)
+
+![](images/Compressive_strength_test.gif)
