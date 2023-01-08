@@ -1,6 +1,6 @@
-This is a Machine Learning model to predict the strength of concrete based on it's input features. The app also suggests the ideal content of different inputs. It is based on Random Forest algorithm.
+This is a Machine Learning model to predict the strength of concrete based on it's input features. 
+Used to readily test the strength based on the composition of The Ingreadients of the Concreate
 
-View app live  - https://share.streamlit.io/raj-shyamal/concrete-strength-predictor/app.py
+View app live  - 
 
-
-![](images/Compressive_strength_test.gif)
+![](images/Screenshot.png)
