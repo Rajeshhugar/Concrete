@@ -10,7 +10,7 @@ filterwarnings('ignore')
 # Nice Concrete Photo
 
 from PIL import Image
-im = Image.open(r"https://github.com/rajeshXT/Concrete_strength/blob/bfe61e45b6596a70a0a6bb9abcffc4c9c714cbc9/images/Compressive_strength_test.gif")
+im = Image.open(r"Compressive_strength_test.gif")
 st.image(im, width = 450, caption = "by Rajesh Hugar")
 
 # App Title
