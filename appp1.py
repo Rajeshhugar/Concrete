@@ -1,7 +1,7 @@
 # Import the Libraries
 
 import streamlit as st
-import pickle
+#import pickle5 as pickle
 import joblib
 import numpy as np
 import pandas as pd
