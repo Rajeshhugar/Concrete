@@ -39,7 +39,7 @@ fineaggregate=st.sidebar.slider("Amount of Fineaggregate", 594, 993, step=1)
 age=st.sidebar.slider("Age in Days", 1, 365, step=1)
 
 # Prepare a Python Dictionary Using the Input Values and Convert to a DataFrame
-st.markdown('ENTER THE QUANTITIES ADDED PER M3 TO GET THE EXPROXIMATE STRENGTH OF CONCRETE ')
+st.markdown('ENTER THE QUANTITIES ADDED PER M3 TO GET THE APPROXIMATE STRENGTH OF CONCRETE ')
 def csMPa():
 
     '''   my_dict = {"cement" :cement,
@@ -65,6 +65,7 @@ dfc = csMPa()
 #model = pickle.load(open("model.pkl", "rb"))
 model = joblib.load('model.joblib') 
 st.markdown('By-Rajesh Hugar')
+st.markdown('hugarrajesh@gmail.com')
 
 if st.sidebar.button ("Submit"):
 
