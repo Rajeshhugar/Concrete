@@ -2,6 +2,8 @@
 
 import streamlit as st
 import pickle
+import joblib
+import numpy as np
 import pandas as pd
 from warnings import filterwarnings
 filterwarnings('ignore')
@@ -40,28 +42,33 @@ age=st.sidebar.slider("Age in Days", 1, 365, step=1)
 st.markdown('ENTER THE QUANTITIES ADDED PER M3 TO GET THE EXPROXIMATE STRENGTH OF CONCRETE ')
 def csMPa():
 
-    my_dict = {"cement" :cement,
+    '''   my_dict = {"cement" :cement,
     "slag":slag,
     "flyash": flyash,
     "water": water ,
     "superplasticizer": superplasticizer,
     "coarseaggregate": coarseaggregate,
     "fineaggregate": fineaggregate,
-    "age":age}
+    "age":age}'''
 
-    
+   
+    test = np.array([[cement, slag, flyash, water, superplasticizer, coarseaggregate, fineaggregate,age]])
 
-    df_sample = pd.DataFrame.from_dict([my_dict])
-    return df_sample
+
+    #df_sample = pd.DataFrame.from_dict([test])
+    # return df_sample
+    #print(test)
+    return test
 
 
 dfc = csMPa()
-model = pickle.load(open("model.pkl", "rb"))
+#model = pickle.load(open("model.pkl", "rb"))
+model = joblib.load('model.joblib') 
 st.markdown('By-Rajesh Hugar')
 
 if st.sidebar.button ("Submit"):
 
 
-    result = (model.predict(dfc))
+    result = (round(model.predict(dfc)[0],2))
     st.success(f"Compressive Strength Prediction of the Concrete is {result} MPa")
     

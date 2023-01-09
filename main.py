@@ -3,6 +3,7 @@ import numpy as np
 from sklearn.ensemble import RandomForestRegressor
 import warnings
 import pickle
+import joblib
 warnings.filterwarnings("ignore")
 
 df = pd.read_csv("concrete.csv")
@@ -20,5 +21,7 @@ Y_test = np.array(test_set[["strength"]])
 rfr = RandomForestRegressor(n_estimators=100)
 rfr.fit(X_train, Y_train)
 
-pickle.dump(rfr,open('model.pkl','wb'))
+#pickle.dump(rfr,open('model.pkl','wb'))
 
+#> from joblib import dump, load
+joblib.dump(rfr,'model.joblib') 
