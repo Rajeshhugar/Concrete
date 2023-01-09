@@ -14,11 +14,12 @@ train_set = shuffle_df[:train_size]
 test_set  = shuffle_df[train_size:]
 
 X_train = np.array(train_set[["cement", "slag", "ash", "water", "superplastic", "coarseagg", "fineagg", "age"]])
+
 Y_train = np.array(train_set[["strength"]])
 X_test = np.array(test_set[["cement", "slag", "ash", "water", "superplastic", "coarseagg", "fineagg", "age"]])
 Y_test = np.array(test_set[["strength"]])
 
-rfr = RandomForestRegressor(n_estimators=100)
+rfr = RandomForestRegressor()
 rfr.fit(X_train, Y_train)
 
 #pickle.dump(rfr,open('model.pkl','wb'))
