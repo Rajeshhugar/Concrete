@@ -65,7 +65,7 @@ dfc = csMPa()
 #model = pickle.load(open("model.pkl", "rb"))
 model = joblib.load('model.joblib') 
 st.markdown('By-Rajesh Hugar')
-st.markdown('hugarrajesh@gmail.com')
+st.markdown('Email_id-hugarrajesh@gmail.com')
 
 if st.sidebar.button ("Submit"):
 
