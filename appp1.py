@@ -64,8 +64,7 @@ def csMPa():
 dfc = csMPa()
 #model = pickle.load(open("model.pkl", "rb"))
 model = joblib.load('model.joblib') 
-st.markdown('By:Rajesh Hugar')
-st.markdown('By:hugarrajesh@gmail.com')
+
 
 if st.sidebar.button ("Submit"):
 
@@ -73,3 +72,7 @@ if st.sidebar.button ("Submit"):
     result = (round(model.predict(dfc)[0],2))
     st.success(f"Compressive Strength Prediction of the Concrete is {result} MPa")
     
+    
+    
+st.markdown('By:Rajesh Hugar')
+st.markdown('By:hugarrajesh@gmail.com')
