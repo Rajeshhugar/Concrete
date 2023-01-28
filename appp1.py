@@ -74,5 +74,5 @@ if st.sidebar.button ("Submit"):
     
     
     
-st.markdown('By:Rajesh Hugar')
-st.markdown('By:hugarrajesh@gmail.com')
+st.markdown('By_Rajesh Hugar')
+st.markdown('By_hugarrajesh@gmail.com')
